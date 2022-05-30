@@ -265,4 +265,5 @@ The following functionality is yet to be implemented.
 
 - Data visualisation layer 
 - CI/CD pipeline integration
+- Data quality checks in the ETL pipeline
 - Redshift database configuration
