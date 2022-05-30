@@ -28,7 +28,7 @@ The system consists of the following components:
 - An S3 bucket (staging area)
 - An EC2 instance (bastion host)
 
-The PostgreSQL database and the Redshift database reside in two private subnets in two different Availability Zones in a VPC (see more details in the [User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html)). For simplicity, the Redshift database is also created in the same subnets in this project. However, it is most likely in separate subnets or even in a different VPC in reality. 
+The PostgreSQL database resides in two private subnets in two different Availability Zones in a VPC (see more details in the [User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html)). For simplicity, the Redshift database is also created in the same subnets in this project. However, it is most likely in separate subnets or even in a different VPC in reality. 
 
 An MWAA (Amazon Managed Workflows for Apache Airflow) instance is set up to access the private subnets so that it can manage the ETL workflow. An S3 bucket is created for the Airflow components ([User Guide](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html)). In addition, another S3 bucket is used for the staging area.
 
